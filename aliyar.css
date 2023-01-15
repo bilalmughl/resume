@@ -1,3 +1,7 @@
+.woocommerce ul.products.list li.product .product-inner > .woo-entry-image{
+    display: none;
+}
 .woocommerce ul.products.list li.product .woo-entry-image{
-    max-width: 25%;
+    /* max-width: 25%; */
+    display: block;
 }
