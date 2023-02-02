@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Video Download</title>
+</head>
+<body>
+  <form>
+    <label for="video-url">Enter YouTube Video URL:</label>
+    <input type="text" id="video-url" name="video-url">
+    <button type="submit" id="submit-btn">Download</button>
+  </form>
+  <div id="download-link"></div>
+  
+  <script>
+    var submitBtn = document.getElementById('submit-btn');
+    var downloadLink = document.getElementById('download-link');
+    
+    submitBtn.addEventListener('click', function(event) {
+      event.preventDefault();
+      
+      var videoUrl = document.getElementById('video-url').value;
+      var videoId = videoUrl.split('v=')[1];
+      var apiKey = 'AIzaSyAFVIcLZ7OcIo4A7Ff7HyhVF948uhapFOA';
+      
+      // Make an AJAX request to the YouTube Data API
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://www.googleapis.com/youtube/v3/videos?part=snippet&id=' + videoId + '&key=' + apiKey);
+    //   xhr.onload = function() {
+    //     if (xhr.status === 200) {
+    //       var video = JSON.parse(xhr.responseText);
+    //       var videoTitle = video.items[0].snippet.title;
+          
+    //       // Create a link to the video file
+    //       var link = document.createElement('a');
+    //       link.href = 'https://www.youtube.com/watch?v=' + videoId;
+    //       link.download = videoTitle + '.mp4';
+    //       link.innerHTML = 'Download ' + videoTitle;
+    //       downloadLink.appendChild(link);
+    //     } else {
+    //       console.log('Error: ' + xhr.status);
+    //     }
+    //   };
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+          var video = JSON.parse(xhr.responseText);
+          var videoTitle = video.items[0].snippet.title;
+          
+          // Create a link to the video file
+          var link = document.createElement('a');
+          link.href = 'https://www.youtube.com/watch?v=' + videoId;
+          link.download = videoTitle + '.mp4';
+          link.style.display = 'none';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else {
+          console.log('Error: ' + xhr.status);
+        }
+  };
+
+      xhr.send();
+    });
+  </script>
+</body>
+</html>

@@ -4,3 +4,85 @@
 .woocommerce ul.products.list li.product .woo-entry-inner li.image-wrap{
     max-width: 25%;
 }
+.single-product main.site-main{
+    padding-top: 115px;
+}
+
+.single-product.woocommerce div.product div.images, 
+.single-product.woocommerce.content-full-width div.product div.images{
+    text-align: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.02);
+}
+.single-product.woocommerce div.product div.summary, 
+.single-product.woocommerce.content-full-width div.product div.summary{
+    padding-left: 30px;
+}
+.owp-qv-container {
+    padding: 0;
+    margin-top: 30px;
+    overflow-y: scroll;
+    height: calc(100vh - 60px);
+}
+.owp-qv-container .woocommerce.single-product{
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.02);
+}
+.owp-qv-content-inner{
+    margin: 0 30px;
+}
+.mbm-grid-4 .woocommerce > .products{
+    display: grid;
+    gap:30px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.mbm-grid-4 .woocommerce > .products > .product > .product-inner{
+    padding: 10px 10px 20px ;
+    height: 100%;
+}
+.mbm-grid-4 .woocommerce > .products > .product > .product-inner .woo-entry-inner li.image-wrap{
+    /* min-height:301px; */
+    padding: 10px;
+    display: flex;
+    background-color: #fff;
+}
+.mbm-grid-4 .woocommerce > .products > .product > .product-inner .woo-entry-inner li.image-wrap .woo-entry-image{
+    margin:auto;
+}
+.mbm-grid-4 .woocommerce > .products > .col{
+    grid-column: auto/span 12;
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+.owp-qv-container .woocommerce span.onsale,
+.mbm-grid-4 .woocommerce span.onsale{
+    top:10px !important;
+    left: 10px !important;
+}
+@media screen and (min-width: 500px) {
+    .mbm-grid-4 .woocommerce > .products > .col{
+        grid-column: auto/span 6;
+    }
+}
+@media screen and (min-width: 768px) {
+    .mbm-grid-4 .woocommerce > .products > .col{
+        grid-column: auto/span 4;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .mbm-grid-4 .woocommerce > .products > .col{
+        grid-column: auto/span 3;
+    }
+}
+@media screen and (max-width: 500px) {
+    #owp-qv-wrap .summary,
+    .single-product.woocommerce div.product div.images, 
+    .single-product.woocommerce.content-full-width div.product div.images{
+        padding: 10px;
+    }
+}
