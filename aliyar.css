@@ -1,6 +1,158 @@
-/* .woocommerce ul.products.list li.product .product-inner > .woo-entry-image{
-    display: none;
-} */
+.search-toggle-li .icon-magnifier:before {
+    font-weight: 700;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  /* .owp-qv-container {
+    padding-top: 134px;
+  } */
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 0px;
+  }
+  /* Hero Title */
+  .elementor-element.hero-title .elementor-widget-container {
+    display: inline-block;
+  }
+  
+  /* Newsletter */
+  .newsletter-shortcode {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .newsletter-shortcode form input {
+    text-align: center;
+    width: 100% !important;
+    max-width: 800px;
+  }
+  /* .newsletter-shortcode form [type="submit"]:hover{
+      border: none !important;
+      background-color: #1E2F42 !important;
+  } */
+  
+  /* Footer Callout */
+  .store-callout .icon-box-icon,
+  .store-callout .icon-box-heading {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .store-callout .icon-box-icon {
+    height: 1em;
+    width: 1em;
+    line-height: 1em;
+  }
+  .store-callout .icon-box-icon i {
+    color: #5b4f4f;
+    font-size: 34px;
+    margin-right: 15px;
+  }
+  .store-callout .icon-box-heading {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+  }
+  #wpadminbar {
+    z-index: 9999999;
+  }
+  .products.oceanwp-row .image-wrap img {
+    width: 100%;
+  }
+  
+  /* form */
+  .contact-form .wpforms-form .wpforms-field {
+    padding: 0 0 20px !important;
+  }
+  .contact-form .wpforms-form .wpforms-field input,
+  .newsletter-shortcode .wpforms-form .wpforms-field input {
+    width: 100%;
+    max-width: 100% !important;
+    border: 1px solid #a9acc0 !important;
+    border-radius: 10px !important;
+    height: 60px !important;
+    padding: 16px !important;
+  }
+  .contact-form .wpforms-form .wpforms-field input:hover,
+  .contact-form .wpforms-form .wpforms-field textarea:hover,
+  .contact-form .wpforms-form .wpforms-field input:focus,
+  .contact-form .wpforms-form .wpforms-field textarea:focus {
+    border-color: #01b97b !important;
+  }
+  .contact-form .wpforms-form .wpforms-field textarea {
+    width: 100%;
+    max-width: 100% !important;
+    border: 1px solid #a9acc0 !important;
+    padding: 16px !important;
+    border-radius: 10px !important;
+  }
+  .contact-form .wpforms-form [type="submit"],
+  .newsletter-shortcode .wpforms-form [type="submit"] {
+    font-size: 18px !important;
+    background-color: #01b97b !important;
+    padding: 18px 30px 18px 30px !important;
+    border-radius: 10px !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+  .contact-form .wpforms-form [type="submit"]:hover,
+  .newsletter-shortcode .wpforms-form [type="submit"]:hover {
+    background-color: #007c52 !important;
+  }
+  
+  .contact-form .wpforms-form .wpforms-submit-container {
+    text-align: right;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .store-callout .icon-box-icon {
+      display: none;
+    }
+    .store-callout .icon-box-heading {
+      display: block;
+      text-align: center;
+    }
+    .hero-section .elementor-background-overlay {
+      background-color: #82c1e0;
+    }
+  }
+  
+  /* Footer Borders */
+  #footer-widgets .contact-info-widget i,
+  #footer-widgets .oceanwp-recent-posts li,
+  #footer-widgets .social-widget li a,
+  #footer-widgets .woocommerce ul.product_list_widget li {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Footer Products */
+  #footer-widgets .price del,
+  #footer-widgets del .amount {
+    color: #ddd;
+  }
+  
+  /* Footer Tags */
+  #footer-widgets .tagcloud a {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  #footer-widgets .tagcloud a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  
 .woocommerce ul.products.list li.product .woo-entry-inner li.image-wrap{
     max-width: 25%;
 }
