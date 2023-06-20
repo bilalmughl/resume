@@ -39,6 +39,8 @@
     clear: both;
     cursor: pointer;
     border: none !important;
+  -webkit-appearance: none; /* Remove default iOS styles */
+        appearance: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -49,12 +51,16 @@ input[type="file"].form-control {
     text-align-last: center;
     cursor: pointer;
     max-width: max-content;
+  -webkit-appearance: none; /* Remove default iOS styles */
+        appearance: none;
 }
 
 /* Additional Styles */
 input.large,
 input[type="file"] {
     border-color: transparent !important;
+  -webkit-appearance: none; /* Remove default iOS styles */
+        appearance: none;
 }
 
 /* iOS Specific Styles */
