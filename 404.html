@@ -39,6 +39,8 @@
     clear: both;
     cursor: pointer;
     border: none !important;
+   -webkit-rtl-ordering: logical;
+  -webkit-writing-mode: horizontal-tb; /* or other appropriate writing mode */
   -webkit-appearance: none; /* Remove default iOS styles */
         appearance: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -50,7 +52,9 @@ input[type="file"].form-control {
     height: inherit;
     text-align-last: center;
     cursor: pointer;
-    max-width: max-content;
+/*     max-width: max-content; */
+   -webkit-rtl-ordering: logical;
+  -webkit-writing-mode: horizontal-tb; /* or other appropriate writing mode */
   -webkit-appearance: none; /* Remove default iOS styles */
         appearance: none;
 }
@@ -64,26 +68,7 @@ input[type="file"] {
 }
 
 /* iOS Specific Styles */
-@supports (-webkit-touch-callout: none) {
-    /* Add iOS-specific styles here */
-    .form-control::file-selector-button,
-    .form-control::-webkit-file-upload-button {
-        /* Update styles for iOS */
-        padding: 10px;
-        width: 100%;
-        max-width: 150px;
-        min-height: 50px;
-        margin: 0 auto 15px;
-        display: block;
-        font-size: 14px !important;
-        clear: both;
-        cursor: pointer;
-        border: none !important;
-        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        -webkit-appearance: none; /* Remove default iOS styles */
-        appearance: none;
-    }
-}
+
 </style>
   </head>
   <body>
