@@ -26,6 +26,59 @@
 
     <!-- main style file -->
     <link rel="stylesheet" href="styles/main.css">
+    <style>/* File Selector Button */
+.form-control::file-selector-button,
+.form-control::-webkit-file-upload-button {
+    padding: 10px;
+    width: 100%;
+    max-width: 150px;
+    min-height: 50px;
+    margin: 0 auto 15px;
+    display: block;
+    font-size: 14px !important;
+    clear: both;
+    cursor: pointer;
+    border: none !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* File Input */
+input[type="file"].form-control {
+    padding: 0;
+    height: inherit;
+    text-align-last: center;
+    cursor: pointer;
+    max-width: max-content;
+}
+
+/* Additional Styles */
+input.large,
+input[type="file"] {
+    border-color: transparent !important;
+}
+
+/* iOS Specific Styles */
+@supports (-webkit-touch-callout: none) {
+    /* Add iOS-specific styles here */
+    .form-control::file-selector-button,
+    .form-control::-webkit-file-upload-button {
+        /* Update styles for iOS */
+        padding: 10px;
+        width: 100%;
+        max-width: 150px;
+        min-height: 50px;
+        margin: 0 auto 15px;
+        display: block;
+        font-size: 14px !important;
+        clear: both;
+        cursor: pointer;
+        border: none !important;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        -webkit-appearance: none; /* Remove default iOS styles */
+        appearance: none;
+    }
+}
+</style>
   </head>
   <body>
     <div id="app">
@@ -165,6 +218,14 @@
 
         <!-- start of 404 page -->
         <div class="not-found-page page">
+          <div class="container">
+  <div class="row">
+    <div class="col">
+     <input class="form-control" id="formFileLg" type="file">
+    </div>
+  </div>
+</div>
+
           <div class="not-found-content">
             <div class="container">
               <div class="not-found-img">
